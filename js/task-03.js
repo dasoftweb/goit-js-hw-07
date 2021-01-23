@@ -33,15 +33,15 @@ const images = [
 
 // VAR 2
 
-const galleryRef = document.querySelector("#gallery");
+// const galleryRef = document.querySelector("#gallery");
 
-function createGalleryImage(image) {
-  return `<li><img src="${this.url}" alt="${this.alt}"></img></li>`;
-}
+// function createGalleryImage(image) {
+//   return `<li><img src="${this.url}" alt="${this.alt}"></img></li>`;
+// }
 
-const imagesList = images.map((image) => createGalleryImage.call(image));
+// const imagesList = images.map((image) => createGalleryImage.call(image));
 
-galleryRef.insertAdjacentHTML("afterbegin", imagesList.join(""));
+// galleryRef.insertAdjacentHTML("afterbegin", imagesList.join(""));
 
 // VAR 3
 
