@@ -7,7 +7,7 @@ function createBoxes(amount) {
   boxesOutputRef.innerHTML = "";
 
   for (let i = 0, boxsize = 30; i < amount; boxsize += 10, i += 1) {
-    let boxesHTML = `<div style="background-color: ${getRandomColor()}; width: ${boxsize}px; height: ${boxsize}px"></div>`;
+    let boxesHTML = `<div style="width: ${boxsize}px; height: ${boxsize}px; background-color: ${getRandomColor()}"></div>`;
     boxesOutputRef.insertAdjacentHTML("beforeend", boxesHTML);
   }
 
