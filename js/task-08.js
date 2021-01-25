@@ -25,22 +25,18 @@ const destroyBoxes = () => {
   boxesOutputRef.innerHTML = "";
 };
 
-renderBtnRef.addEventListener("click", (event) => {
-  event.preventDefault();
+renderBtnRef.addEventListener("click", () => {
   createBoxes(boxesInputRef.value);
 });
 
-destroyBtnRef.addEventListener("click", (event) => {
-  event.preventDefault();
+destroyBtnRef.addEventListener("click", () => {
   destroyBoxes();
 });
 
-// renderBtnRef.onclick = function (evt) {
-//   evt.preventDefault();
+// renderBtnRef.onclick = function () {
 //   createBoxes(boxesInputRef.value);
 // };
 
-// destroyBtnRef.onclick = function (evt) {
-//   evt.preventDefault();
+// destroyBtnRef.onclick = function () {
 //   destroyBoxes();
 // };
