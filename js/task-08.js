@@ -3,7 +3,7 @@ const renderBtnRef = document.querySelector('button[data-action="render"]');
 const destroyBtnRef = document.querySelector('button[data-action="destroy"]');
 const boxesOutputRef = document.querySelector("#boxes");
 
-function createBoxes(amount) {
+const createBoxes = (amount) => {
   boxesOutputRef.innerHTML = "";
 
   for (let i = 0, boxsize = 30; i < amount; boxsize += 10, i += 1) {
@@ -19,18 +19,28 @@ function createBoxes(amount) {
     }
     return color;
   }
-}
+};
 
-function destroyBoxes() {
+const destroyBoxes = () => {
   boxesOutputRef.innerHTML = "";
-}
+};
 
-renderBtnRef.onclick = function (evt) {
-  evt.preventDefault();
+renderBtnRef.addEventListener("click", (event) => {
+  event.preventDefault();
   createBoxes(boxesInputRef.value);
-};
+});
 
-destroyBtnRef.onclick = function (evt) {
-  evt.preventDefault();
+destroyBtnRef.addEventListener("click", (event) => {
+  event.preventDefault();
   destroyBoxes();
-};
+});
+
+// renderBtnRef.onclick = function (evt) {
+//   evt.preventDefault();
+//   createBoxes(boxesInputRef.value);
+// };
+
+// destroyBtnRef.onclick = function (evt) {
+//   evt.preventDefault();
+//   destroyBoxes();
+// };
